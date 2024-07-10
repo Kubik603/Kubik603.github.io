@@ -1,0 +1,74 @@
+<HTML>
+<head>
+	<title> Wrocław - Historia </title>
+	<link rel="Stylesheet" type="text/css" href="style.css" />
+	<link rel="Stylesheet" type="text/css" href="css/fontello.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Courgette&display=swap" rel="stylesheet">
+</head>
+<div id="top">
+	<div id="naglowek"> </div>
+	<div id='menu'>
+		<a href='strona.html' class='tile'> <div class='tile'> <i class="icon-home"></i> <br> Strona główna </div> </a>
+		<a href='Podstrona1.html' class='tile'> <div class='tile1'> <i class="icon-book-open"></i> <br> Historia </div> </a>
+		<a href='Podstrona2.html' class='tile'> <div class='tile'> <i class="icon-picture"></i> <br> Zdjęcia </div> </a> 
+		<a href='Podstrona3.html' class='tile'> <div class='tile1'> <i class="icon-link"></i> <br> Linki </div> </a>
+	</div>  
+	<div id='tresc'>
+	<div id='title'> Historia </div>
+	<div class='tekst'>
+	<p style="font-size: 25px">Wrocław, miasto o bogatej i złożonej historii, rozpoczął swoją podróż w czasach antycznych, kiedy to znany był jako Budorigum. W II wieku naszej ery, na mapie Klaudiusza Ptolemeusza, pojawia się wzmianka o miejscowości w okolicach dzisiejszego Wrocławia, co świadczy o jego długiej historii osadnictwa. Archeolodzy odnaleźli ślady osadnictwa z okresu kultury przeworskiej, w tym pozostałości osady hutniczej i groby z bogatym wyposażeniem.</p>
+	<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01">
+	<div id="caption"></div>
+	</div>
+	<div class='photoh'> <IMG SRC="wroclaw-mapa.jpeg"  ALT="."  width='400px' height='225px' data-caption='Plan Wrocławia z 1562 roku'></div>
+	<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" src='wroclaw-1.jpg'>
+	<div id="caption"></div>
+	</div>
+
+	<p style="font-size: 22px"> 
+		Założenie miasta przypisuje się Mieszkowi I, choć istnieją różne teorie na ten temat. Pierwsza osada na Ostrowie Tumskim powstała w IX wieku, a wkrótce potem rozpoczęto budowę obwarowań miejskich. W roku 1000, podczas zjazdu gnieźnieńskiego, ustanowiono biskupstwo wrocławskie, co uczyniło miasto ważnym ośrodkiem religijnym, kulturalnym oraz handlowym.
+		Wrocław, zamieszkany przez plemię Ślężan, zaczął dynamicznie się rozwijać. Po śmierci księcia Henryka VI Dobrego w 1335 roku, miasto stało się częścią korony królestwa czeskiego. W XVI wieku król czeski Władysław Jagiellończyk nadał miastu przywilej, który umożliwił założenie uniwersytetu, jednak jego utworzenie nastąpiło dopiero w XVIII wieku pod panowaniem Habsburgów.
+		Wrocław wielokrotnie zmieniał przynależność państwową, co wpłynęło na jego różnorodność kulturową i architektoniczną. Miasto powróciło do Polski na stałe w 1945 roku po zakończeniu II wojny światowej.
+		Dzisiaj Wrocław jest symbolem tolerancji i wielokulturowości, co odzwierciedla się w jego bogatej ofercie kulturalnej, edukacyjnej i gospodarczej. To miasto, które pomimo wielu trudnych momentów w historii, zawsze potrafiło się odrodzić i kontynuować swoją niezwykłą tradycję jako miejsce spotkań różnych kultur i narodów.
+	</p>
+	</div>
+	</div>
+	<div id='stopka'> Jakub Stefaniak 3F &copy</div>
+	
+
+</div>
+</body>
+
+
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var img = document.getElementsByClassName('photoh');
+for (let i = 0; i < img.length; i++)
+{
+  img[i].onclick = function()
+  {
+    modal.style.display = "block";
+    modalImg.src = this.children[0].src;
+    captionText.innerHTML = this.children[0].dataset.caption;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function()
+{ 
+  modal.style.display = "none";
+}
+
+</script>
+
+</HTML>

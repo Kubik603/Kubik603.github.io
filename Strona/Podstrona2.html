@@ -1,0 +1,64 @@
+<HTML>
+<head>
+	<title> Wrocław - Zdjęcia </title>
+	<link rel="Stylesheet" type="text/css" href="style.css" />
+	<link rel="Stylesheet" type="text/css" href="css/fontello.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Courgette&display=swap" rel="stylesheet">
+</head>
+<div id="top">
+	<div id="naglowek"> </div>
+	<div id='menu'>
+		<a href='strona.html' class='tile'> <div class='tile'> <i class="icon-home"></i> <br> Strona główna </div> </a>
+		<a href='Podstrona1.html' class='tile'> <div class='tile1'> <i class="icon-book-open"></i> <br> Historia </div> </a>
+		<a href='Podstrona2.html' class='tile'> <div class='tile'> <i class="icon-picture"></i> <br> Zdjęcia </div> </a> 
+		<a href='Podstrona3.html' class='tile'> <div class='tile1'> <i class="icon-link"></i> <br> Linki </div> </a>
+	</div>  
+	<div id='tresc'>
+	<div id='title'> Zdjęcia </div>
+	<div class='photo'> <IMG SRC="wroclaw-1.jpeg"  ALT="." width='225px' height='225px' data-caption='Wrocławski Rynek'> </div>
+	<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="img01">
+	<div id="caption"></div>
+	</div>
+	<div class='photo'> <IMG SRC="wroclaw-2.jpg"  ALT="Ostrów tumski" width='225px' height='225px' data-caption='Ostrów Tumski'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-3.jpeg"  ALT="Most tumski" width='225px' height='225px' data-caption='Most Tumski'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-4.jpeg"  ALT="Uniwersytet Wrocławski" width='225px' height='225px' data-caption='Uniwersytet Wrocławski'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-5.jpeg"  ALT="Przykładowy krasnal wrocławski" width='225px' height='225px' data-caption='Przykładowy krasnal wrocławski'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-6.jpeg"  ALT="Mostek Pokutnic" width='225px' height='225px' data-caption='Mostek Pokutnic'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-7.jpeg"  ALT="Wnętrze Panoramy Racławickiej" width='225px' height='225px' data-caption='Wnętrze Panoramy Racławickiej'> </div>
+	<div class='photo'> <IMG SRC="wroclaw-8.jpeg"  ALT="Hydropolis" width='225px' height='225px' data-caption='Hydropolis - interaktywne centrum nauki poświęcone wodzie'> </div>
+	</div>
+	<div id='stopka'> Jakub Stefaniak 3F &copy</div>
+</div>
+</body>
+
+
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var img = document.getElementsByClassName('photo');
+for (let i = 0; i < img.length; i++)
+{
+  img[i].onclick = function()
+  {
+    modal.style.display = "block";
+    modalImg.src = this.children[0].src;
+    captionText.innerHTML = this.children[0].dataset.caption;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function()
+{ 
+  modal.style.display = "none";
+}
+
+</script>
+
+</HTML>
